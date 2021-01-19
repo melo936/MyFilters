@@ -92,9 +92,13 @@ browserleaks.com###efvi_text
 
 ! Remove Ads and Trackers from Adjaranet
 www.adjaranet.com##.bcMSeG.sc-1a0vp7y-0
+www.adjaranet.com##.blhZtf.sc-1a0vp7y-0
+www.adjaranet.com##.dZlTWE.sc-1a0vp7y-0
+www.adjaranet.com##.hdaBUM.sc-1a0vp7y-0
 www.adjaranet.com##.lEFkD.sc-1a0vp7y-0
 www.adjaranet.com##.ldChrm.sc-1a0vp7y-0
 www.adjaranet.com##.like-share.kxszRd.grvmck-3
+www.adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||bms1.adjarabet.com^
 ||bmscontent1.adjarabet.com^
 ||counter.top.ge^
@@ -116,6 +120,11 @@ www.adjaranet.com##.like-share.kxszRd.grvmck-3
 
 ! Remove ads and prevent tracking from iMovies.cc
 !! va.da.ge is Original just in case
+www.imovies.cc##.mobile-header-banner.header-banner
+www.imovies.cc##.mt-35
+www.imovies.cc##.playlist-banner-cont
+www.imovies.cc##.spinner-banner
+www.imovies.cc##div.d-sm-block.d-none
 ||api.imovies.cc/api/*/logger 
 ||da.ge^
 ||facebook.com^$domain=imovies.cc
