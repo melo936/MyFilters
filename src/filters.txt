@@ -1,0 +1,206 @@
+[Dreammjow's Personal Filters]
+! Homepage: https://github.com/dreammjow/MyFilters
+! Licence: https://github.com/dreammjow/MyFilters/LICENSE
+! 
+! GitHub issues: https://github.com/dreammjow/MyFilters/issues
+! GitHub pull requests: https://github.com/dreammjow/MyFilters/pulls
+! Special thanks to uBlockOrigin, Easylist and AdGuard! this list wouldn't be anything without their hard work, please support them.
+
+! Google
+||ade.googlesyndication.com^
+||ade.googlesyndication.com^
+||adservice.google.com^
+||doubleclick.net^
+||google-analytics.com^
+||googleads4.g.doubleclick.net^
+||googlesyndication.com^
+||googletagmanager.com^$3p
+||googletagservices.com^
+||googletagservices.com^$3p
+||mail-ads.google.com^
+||pagead2.googlesyndication.com^
+||tpc.googlesyndication.com^
+||www.google.com/imgevent$ping
+||www.google.com/log
+||youtube.com/api/stats/atr
+
+! Prevent Tracking URLs
+/OneCollector
+/activity
+/ads
+/ads/ga-audiences
+/ads_batch
+/adsid/google/ui
+/advertisement_
+/analytics
+/api/stats 
+/beacon
+/browser_reporting
+/client_204?$image,other,ping,script
+/count
+/csi_204?$image,other,ping,script
+/cspreport
+/events
+/gen204?$image,other,ping,script
+/gen_204?$image,other,ping,script
+/generate_204$image,other,ping,script
+/gtag
+/headerstats
+/log
+/log_event
+/m3d0s1
+/pagead
+/pixel
+/reader/logging?
+/report
+/track
+/tracking/csp
+
+! Prevent Tracking URLs v2 (www.example.nothing/analytics.js)
+/adblocker.js
+/analytics.js
+/analytics_debug.js
+/apstag.js
+/chartbeat.js
+/gpt.js
+/gtm.js
+/ht.js
+/urs.js
+
+! Discord Tracking
+||crash.discord.com^
+||crash.discordapp.com^
+||discord.com/api/*/applications/detectable
+||discord.com/api/*/experiments
+||discord.com/api/*/rtc/quality-report
+||discord.com/api/*/science
+||discord.com/api/*/track
+||discord.com/api/*/users/@me?with_analytics_token=true
+||discord.com/api/science
+||discord.com/api/track
+||report-uri.cloudflare.com^
+||sentry.io^
+
+! Facebook
+||ads.facebook.com^
+||analytics.facebook.com^
+||pixel.facebook.com^
+
+! Remove a Nord VPN ad from BrowserLeaks.com
+browserleaks.com###efvi_img
+browserleaks.com###efvi_text
+
+! Remove Ads and Trackers from Adjaranet
+www.adjaranet.com##.bcMSeG.sc-1a0vp7y-0
+www.adjaranet.com##.lEFkD.sc-1a0vp7y-0
+www.adjaranet.com##.ldChrm.sc-1a0vp7y-0
+www.adjaranet.com##.like-share.kxszRd.grvmck-3
+||bms1.adjarabet.com^
+||bmscontent1.adjarabet.com^
+||counter.top.ge^
+!! Blocking Facebook breaks Comments section
+||facebook.com^$domain=adjaranet.com
+||facebook.net^$domain=adjaranet.com
+||open5.myvideo.ge^
+||trgde.adocean.pl^
+
+! Remove Ads and prevent tracking from Twitch
+||amazon-adsystem.com^
+||app.link^
+||beacon.krxd.net^
+||branch.io^$3p
+||countess.twitch.tv^
+||d2v02itv0y9u9t.cloudfront.net^
+||scorecardresearch.com^
+||twitch.tv/track/
+
+! Remove ads and prevent tracking from iMovies.cc
+!! va.da.ge is Original just in case
+||api.imovies.cc/api/*/logger 
+||da.ge^
+||facebook.com^$domain=imovies.cc
+||facebook.net^$domain=imovies.cc
+||hotjar.com^$3p
+
+! AutoPapa.ge
+autopapa.ge###cboxContent
+autopapa.ge###cboxOverlay
+||addthis.com^$3p
+||widget.siteheart.com^$3p
+
+! Srulad.com
+srulad.com##.pull-right > div
+srulad.com##.sticky.stickyAds
+srulad.com##div.m-b-15.row:nth-of-type(1)
+srulad.com##div.m-b-15.row:nth-of-type(10)
+srulad.com##div.m-b-15.row:nth-of-type(6)
+||apis.google.com/js/platform.js$domain=srulad.com
+||code.createjs.com^$domain=srulad.com
+||crystal-ad.ge^
+||facebook.com^$domain=srulad.com
+||facebook.net^$domain=srulad.com
+||geoadsense.ge^
+||srulad.com/ads.php
+
+! GitHub
+||api.github.com/_private/browser/stats$important
+||collector.githubapp.com^
+
+! Mail.ru
+mail.ru##.tgb__link
+mail.ru##.trg-b-banner
+mail.ru##.trg-banners
+
+! Currently not categorized
+||360.tbcconnect.ge/collector.js
+||aaxads.com^
+||ad.initl.xiaomi.com^
+||adbrix.io^
+||ads.cc^
+||ads.clip.ge^
+||ads.metronome.ge^
+||adserver-us.adtech.advertising.com^
+||adsrvr.org^
+||alb.reddit.com^
+||amung.us^
+||analytics.adjara.com^
+||analytics.grena.ge^
+||anon-stats.eff.org^
+||apianalytics.adjara.com^
+||appmetrica.yandex.com^
+||casalemedia.com^
+||chartbeat.com^
+||cohesionapps.com^$3p
+||confiant-integrations.global.ssl.fastly.net^
+||counter.yadro.ru^
+||crash.steampowered.com^
+||crashlytics.twimg.com^
+||do-not-tracker.org^
+||duckduckgo.com/t/
+||eviltracker.net^
+||go-mpulse.net^
+||improving.duckduckgo.com^
+||intake-analytics.wikimedia.org
+||js-agent.newrelic.com^
+||js-agent.newrelic.com^
+||links.boom.ge^
+||log.tiktokv.com^
+||metrics.torproject.org^
+||moatads.com^
+||nextdns.com^
+||openx.net^
+||ping.tapas.io^
+||pubmatic.com^
+||reddit.com/static/pixel.png$image
+||rlcdn.com^
+||rubiconproject.com^
+||rubiconproject.com^
+||static.my.ge/*/js/banners.js
+||summerhamster.com^
+||tags.tiqcdn.com^
+||teams.events.data.microsoft.com^
+||telemetry.soundcloud.com^
+||trackersimulator.org^
+||trafficjunky.com^$3p
+||trustx.org^
+
