@@ -1,4 +1,5 @@
 [Dreammjow's Personal Filters]
+! Title: Dreammjow's Personal Filters
 ! Homepage: https://github.com/dreammjow/MyFilters
 ! Licence: https://github.com/dreammjow/MyFilters/LICENSE
 ! 
@@ -7,21 +8,15 @@
 ! Special thanks to uBlockOrigin, Easylist and AdGuard! this list wouldn't be anything without their hard work, please support them.
 
 ! Google
-||ade.googlesyndication.com^
-||ade.googlesyndication.com^
 ||adservice.google.com^
 ||doubleclick.net^
 ||google-analytics.com^
-||googleads4.g.doubleclick.net^
 ||googlesyndication.com^
 ||googletagmanager.com^$3p
-||googletagservices.com^
 ||googletagservices.com^$3p
 ||mail-ads.google.com^
-||pagead2.googlesyndication.com^
-||tpc.googlesyndication.com^
-||www.google.com/imgevent$ping
-||www.google.com/log
+||google.com/imgevent$ping
+||google.com/log
 ||youtube.com/api/stats/atr
 
 ! Prevent Tracking URLs
@@ -91,14 +86,14 @@ browserleaks.com###efvi_img
 browserleaks.com###efvi_text
 
 ! Remove Ads and Trackers from Adjaranet
-www.adjaranet.com##.bcMSeG.sc-1a0vp7y-0
-www.adjaranet.com##.blhZtf.sc-1a0vp7y-0
-www.adjaranet.com##.dZlTWE.sc-1a0vp7y-0
-www.adjaranet.com##.hdaBUM.sc-1a0vp7y-0
-www.adjaranet.com##.lEFkD.sc-1a0vp7y-0
-www.adjaranet.com##.ldChrm.sc-1a0vp7y-0
-www.adjaranet.com##.like-share.kxszRd.grvmck-3
-www.adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
+adjaranet.com##.bcMSeG.sc-1a0vp7y-0
+adjaranet.com##.blhZtf.sc-1a0vp7y-0
+adjaranet.com##.dZlTWE.sc-1a0vp7y-0
+adjaranet.com##.hdaBUM.sc-1a0vp7y-0
+adjaranet.com##.lEFkD.sc-1a0vp7y-0
+adjaranet.com##.ldChrm.sc-1a0vp7y-0
+adjaranet.com##.like-share.kxszRd.grvmck-3
+adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||bms1.adjarabet.com^
 ||bmscontent1.adjarabet.com^
 ||counter.top.ge^
@@ -120,11 +115,11 @@ www.adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 
 ! Remove ads and prevent tracking from iMovies.cc
 !! va.da.ge is Original just in case
-www.imovies.cc##.mobile-header-banner.header-banner
-www.imovies.cc##.mt-35
-www.imovies.cc##.playlist-banner-cont
-www.imovies.cc##.spinner-banner
-www.imovies.cc##div.d-sm-block.d-none
+imovies.cc##.mobile-header-banner.header-banner
+imovies.cc##.mt-35
+imovies.cc##.playlist-banner-cont
+imovies.cc##.spinner-banner
+imovies.cc##div.d-sm-block.d-none
 ||api.imovies.cc/api/*/logger 
 ||da.ge^
 ||facebook.com^$domain=imovies.cc
@@ -189,8 +184,7 @@ mail.ru##.trg-banners
 ||eviltracker.net^
 ||go-mpulse.net^
 ||improving.duckduckgo.com^
-||intake-analytics.wikimedia.org
-||js-agent.newrelic.com^
+||intake-analytics.wikimedia.org^
 ||js-agent.newrelic.com^
 ||links.boom.ge^
 ||log.tiktokv.com^
@@ -202,7 +196,6 @@ mail.ru##.trg-banners
 ||pubmatic.com^
 ||reddit.com/static/pixel.png$image
 ||rlcdn.com^
-||rubiconproject.com^
 ||rubiconproject.com^
 ||static.my.ge/*/js/banners.js
 ||summerhamster.com^
