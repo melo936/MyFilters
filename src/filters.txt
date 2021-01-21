@@ -7,18 +7,6 @@
 ! GitHub pull requests: https://github.com/dreammjow/MyFilters/pulls
 ! Special thanks to uBlockOrigin, Easylist and AdGuard! this list wouldn't be anything without their hard work, please support them.
 
-! Google
-||adservice.google.com^
-||doubleclick.net^
-||google-analytics.com^
-||googlesyndication.com^
-||googletagmanager.com^$3p
-||googletagservices.com^$3p
-||mail-ads.google.com^
-||google.com/imgevent$ping
-||google.com/log
-||youtube.com/api/stats/atr
-
 ! Prevent Tracking URLs
 /OneCollector
 /activity
@@ -46,6 +34,7 @@
 /m3d0s1
 /pagead
 /pixel
+/qoe?
 /reader/logging?
 /report
 /track
@@ -61,6 +50,34 @@
 /gtm.js
 /ht.js
 /urs.js
+
+! Google
+||adservice.google.com^
+||doubleclick.net^
+||google-analytics.com^
+||googlesyndication.com^
+||googletagmanager.com^$3p
+||googletagservices.com^$3p
+||mail-ads.google.com^
+||google.com/imgevent$ping
+||google.com/log
+	!!YouTube
+||youtube.com/api/stats/atr
+youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
+youtube.com###masthead-ad
+youtube.com###merch-shelf
+youtube.com###offer-module
+youtube.com###player-ads
+youtube.com###ticker.ytd-masthead
+youtube.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
+youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
+youtube.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com##div#masthead-ad
+youtube.com##div#player-ads
+youtube.com#@##subscribe-button
+
+
+youtube.com##.ytp-ad-progress-list
 
 ! Discord Tracking
 ||crash.discord.com^
