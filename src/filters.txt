@@ -37,6 +37,7 @@
 /log
 /log_event
 /m3d0s1
+/metrics
 /optimizely-
 /pagead
 /pixel
@@ -58,6 +59,7 @@
 /apstag.js
 /asyncjs.php
 /chartbeat.js
+/csp-report.php
 /fbevents.js
 /flo.js
 /gpt.js
@@ -69,6 +71,11 @@
 .openxtag.
 
 ! Google
+##.adsbygoogle
+##[id^="div-gpt-ad-"]
+##div[id^="div-gpt-ad"]
+##div[id^="div-gpt-ad-"]
+##ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
 ||adservice.google.com^
 ||doubleclick.net^
 ||google-analytics.com^
@@ -86,14 +93,14 @@ youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
 youtube.com###masthead-ad
 youtube.com###merch-shelf
 youtube.com###offer-module
-youtube.com###player-ads
 youtube.com###ticker.ytd-masthead
-youtube.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
-youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
-youtube.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com##div#masthead-ad
-youtube.com##div#player-ads
 youtube.com##iron-overlay-backdrop
+youtube.com,youtube-nocookie.com###player-ads
+youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
+youtube.com,youtube-nocookie.com##+js(set-constant, playerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##div#player-ads
 	!!YouTube Experimental
 ||consent.google.com^
 ||consent.youtube.com^
@@ -162,6 +169,8 @@ imovies.cc##.mobile-header-banner.header-banner
 imovies.cc##.mt-35
 imovies.cc##.playlist-banner-cont
 imovies.cc##.spinner-banner
+imovies.cc##[src="https://open5.myvideo.ge/delivery/afrs2.php?zid=201&cb=0.013296659866074534"]
+imovies.cc##[src="https://open5.myvideo.ge/delivery/afrs2.php?zid=303&cb=0.4309683877017283"]
 imovies.cc##div.d-sm-block.d-none
 ||api.imovies.cc/api/*/logger 
 ||da.ge^
@@ -179,8 +188,15 @@ autopapa.ge###cboxOverlay
 ||widget.siteheart.com^$3p
 
 ! Srulad.com
+srulad.com##.d-sm-block.d-none.m-b-15.row
+srulad.com##.d-sm-block.d-none.pause_banner_ad
+srulad.com##.fixed-ads.d-sm-block.d-none.p-l-0.col-lg-5
+srulad.com##.loaded.d-xxl-none.d-sm-block.d-none.m-t-15.lazyLoad
+srulad.com##.m-t-15.m-b-15.row
 srulad.com##.pull-right > div
 srulad.com##.sticky.stickyAds
+srulad.com##[href^="https://www.crystalbet.com/Pages/AdsRedirect.aspx"]
+srulad.com##[src="/assets/banners/660-90.png?v=2"]
 srulad.com##div.m-b-15.row:nth-of-type(1)
 srulad.com##div.m-b-15.row:nth-of-type(10)
 srulad.com##div.m-b-15.row:nth-of-type(6)
@@ -191,6 +207,7 @@ srulad.com##div.m-b-15.row:nth-of-type(6)
 ||facebook.net^$domain=srulad.com
 ||geoadsense.ge^
 ||srulad.com/ads.php
+||srulad.com/assets/banners
 
 ! GitHub
 ||api.github.com/_private/browser/stats$important
@@ -205,6 +222,7 @@ mail.ru##.trg-banners
 forum.ge###advert-three
 
 ! MyVideo.ge
+myvideo.ge###mv_leaderboard
 myvideo.ge###promoge_advert
 myvideo.ge##.fluid.mv_banner_600x100
 ||pixel.analyticson.ai^
@@ -218,6 +236,15 @@ myhome.ge##.banner.a-banners
 myhome.ge##.h-banners
 myhome.ge##.text-center.full-banner
 
+! ZippyShare
+zippyshare.com##+js(abort-current-inline-script, String.fromCharCode, decodeURIComponent)
+zippyshare.com##+js(abort-on-property-read, open)
+zippyshare.com##+js(abort-on-property-write, Fingerprint2)
+zippyshare.com##+js(noeval)
+zippyshare.com##.center_ad
+||clksite.com^
+||ds88pc0kw6cvc.cloudfront.net^
+||www39.zippyshare.com/sw.js
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
@@ -230,6 +257,7 @@ myhome.ge##.text-center.full-banner
 ||ads.cc^
 ||ads.clip.ge^
 ||ads.metronome.ge^
+||ads1-adnow.com^
 ||adserver-us.adtech.advertising.com^
 ||adsrvr.org^
 ||adword.ge^
@@ -276,6 +304,7 @@ myhome.ge##.text-center.full-banner
 ||ping.tapas.io^
 ||pubmatic.com^
 ||pubmine.com^
+||quantserve.com^
 ||reddit.com/static/pixel.png$image
 ||rlcdn.com^
 ||rubiconproject.com^
