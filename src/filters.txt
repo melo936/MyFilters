@@ -8,15 +8,18 @@
 ! Special thanks to uBlockOrigin, Easylist and AdGuard! this list wouldn't be anything without their hard work, please support them.
 
 ! Prevent Tracking URLs
+&pagereferrer=
 /OneCollector
 /activity
 /ads
 /ads/ga-audiences
 /ads_batch
+/adsanity
 /adsid/google/ui
 /advertisement_
+/ajax/eventlog?
 /analytics
-/api/stats 
+/api/stats
 /beacon
 /browser_reporting
 /client_204?$image,other,ping,script
@@ -29,27 +32,41 @@
 /generate_204$image,other,ping,script
 /gtag
 /headerstats
+/internal_metrics
+/link-tracker-
 /log
 /log_event
 /m3d0s1
+/optimizely-
 /pagead
 /pixel
+/ptracking
 /qoe?
 /reader/logging?
 /report
 /track
 /tracking/csp
+/trigger_anonymous
+/wp-json/ads
+/www/delivery/*
 
 ! Prevent Tracking URLs v2 (www.example.nothing/analytics.js)
 /adblocker.js
 /analytics.js
 /analytics_debug.js
+/angular8.js
 /apstag.js
+/asyncjs.php
 /chartbeat.js
+/fbevents.js
+/flo.js
 /gpt.js
 /gtm.js
+/honeybadger.min.js$3p
 /ht.js
+/mpulse.js
 /urs.js
+.openxtag.
 
 ! Google
 ||adservice.google.com^
@@ -63,6 +80,8 @@
 ||google.com/log
 	!!YouTube
 ||youtube.com/api/stats/atr
+youtube.com###consent-bump
+youtube.com###consent-bump > .ytd-consent-bump-lightbox.style-scope
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
 youtube.com###masthead-ad
 youtube.com###merch-shelf
@@ -74,8 +93,10 @@ youtube.com##+js(set-constant, playerResponse.adPlacements, undefined)
 youtube.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com##div#masthead-ad
 youtube.com##div#player-ads
-youtube.com#@##subscribe-button
-
+youtube.com##iron-overlay-backdrop
+	!!YouTube Experimental
+||consent.google.com^
+||consent.youtube.com^
 
 youtube.com##.ytp-ad-progress-list
 
@@ -96,6 +117,8 @@ youtube.com##.ytp-ad-progress-list
 ! Facebook
 ||ads.facebook.com^
 ||analytics.facebook.com^
+||facebook.com/common/cavalry_endpoint.php?
+||facebook.com/tr$3p
 ||pixel.facebook.com^
 
 ! Remove a Nord VPN ad from BrowserLeaks.com
@@ -125,13 +148,16 @@ adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||app.link^
 ||beacon.krxd.net^
 ||branch.io^$3p
+||client-event-reporter.twitch.tv^
 ||countess.twitch.tv^
 ||d2v02itv0y9u9t.cloudfront.net^
 ||scorecardresearch.com^
+||spade.sci.twitch.tv^$3p
 ||twitch.tv/track/
 
 ! Remove ads and prevent tracking from iMovies.cc
 !! va.da.ge is Original just in case
+imovies.cc##.mobile-baber
 imovies.cc##.mobile-header-banner.header-banner
 imovies.cc##.mt-35
 imovies.cc##.playlist-banner-cont
@@ -142,6 +168,9 @@ imovies.cc##div.d-sm-block.d-none
 ||facebook.com^$domain=imovies.cc
 ||facebook.net^$domain=imovies.cc
 ||hotjar.com^$3p
+
+! Twitter
+||ads-twitter.com^
 
 ! AutoPapa.ge
 autopapa.ge###cboxContent
@@ -172,23 +201,48 @@ mail.ru##.tgb__link
 mail.ru##.trg-b-banner
 mail.ru##.trg-banners
 
+! Forum.ge
+forum.ge###advert-three
+
+! MyVideo.ge
+myvideo.ge###promoge_advert
+myvideo.ge##.fluid.mv_banner_600x100
+||pixel.analyticson.ai^
+||promo.ge^
+||ws.sharethis.com^
+
+! MyHome.ge
+myhome.ge###A3
+myhome.ge###T
+myhome.ge##.banner.a-banners
+myhome.ge##.h-banners
+myhome.ge##.text-center.full-banner
+
+
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
+||a.quora.com^
 ||aaxads.com^
 ||ad.initl.xiaomi.com^
 ||adbrix.io^
+||admixer.net^
+||adocean.pl^
 ||ads.cc^
 ||ads.clip.ge^
 ||ads.metronome.ge^
 ||adserver-us.adtech.advertising.com^
 ||adsrvr.org^
+||adword.ge^
 ||alb.reddit.com^
 ||amung.us^
 ||analytics.adjara.com^
 ||analytics.grena.ge^
 ||anon-stats.eff.org^
+||api-js.mixpanel.com/engage/?
 ||apianalytics.adjara.com^
 ||appmetrica.yandex.com^
+||appnexus.com^
+||bizible.com^
 ||casalemedia.com^
 ||chartbeat.com^
 ||cohesionapps.com^$3p
@@ -196,25 +250,39 @@ mail.ru##.trg-banners
 ||counter.yadro.ru^
 ||crash.steampowered.com^
 ||crashlytics.twimg.com^
+||criteo.net^
+||demandbase.com^
 ||do-not-tracker.org^
 ||duckduckgo.com/t/
 ||eviltracker.net^
+||geoads.ltd^
 ||go-mpulse.net^
+||horizonme.net^
 ||improving.duckduckgo.com^
 ||intake-analytics.wikimedia.org^
 ||js-agent.newrelic.com^
+||licdn.com/*li.lms-analytics/
 ||links.boom.ge^
 ||log.tiktokv.com^
+||logsvr.xmcsrv.net^
 ||metrics.torproject.org^
 ||moatads.com^
+||munchkin.marketo.net^
 ||nextdns.com^
+||nr-data.net^
+||onetrust.com^$ping
 ||openx.net^
+||p.typekit.net^$3p
 ||ping.tapas.io^
 ||pubmatic.com^
+||pubmine.com^
 ||reddit.com/static/pixel.png$image
 ||rlcdn.com^
 ||rubiconproject.com^
+||servedbyadbutler.com^
 ||static.my.ge/*/js/banners.js
+||stats.mydramalist.com^
+||stats.wp.com^
 ||summerhamster.com^
 ||tags.tiqcdn.com^
 ||teams.events.data.microsoft.com^
@@ -222,4 +290,6 @@ mail.ru##.trg-banners
 ||trackersimulator.org^
 ||trafficjunky.com^$3p
 ||trustx.org^
-
+||webpushr.com^$3p
+||wisepops.com^
+||wordpress.com/geo/
