@@ -18,14 +18,15 @@
 /adsid/google/ui
 /advertisement_
 /ajax/eventlog?
-/analytics
 /api/stats
 /beacon
 /browser_reporting
+/busting/*/gtm-
 /client_204?$image,other,ping,script
 /count
 /csi_204?$image,other,ping,script
 /cspreport
+/dlpageping?
 /events
 /gen204?$image,other,ping,script
 /gen_204?$image,other,ping,script
@@ -34,8 +35,8 @@
 /headerstats
 /internal_metrics
 /link-tracker-
-/log
 /log_event
+/logimpressions?
 /m3d0s1
 /metrics
 /optimizely-
@@ -45,9 +46,11 @@
 /qoe?
 /reader/logging?
 /report
+/reportmyactivity
 /track
 /tracking/csp
 /trigger_anonymous
+/videojs.ads.
 /wp-json/ads
 /www/delivery/*
 
@@ -58,6 +61,8 @@
 /angular8.js
 /apstag.js
 /asyncjs.php
+/autotrack.js
+/beacon.js
 /chartbeat.js
 /csp-report.php
 /fbevents.js
@@ -85,15 +90,19 @@
 ||mail-ads.google.com^
 ||google.com/imgevent$ping
 ||google.com/log
-	!!YouTube
+! Experimental
+||gstaticadssl.l.google.com^
+
+! YouTube
 ||youtube.com/api/stats/atr
 youtube.com###consent-bump
-youtube.com###consent-bump > .ytd-consent-bump-lightbox.style-scope
+youtube.com##.ytd-popup-container.style-scope
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
 youtube.com###masthead-ad
 youtube.com###merch-shelf
 youtube.com###offer-module
 youtube.com###ticker.ytd-masthead
+youtube.com##.ytp-ad-progress-list
 youtube.com##div#masthead-ad
 youtube.com##iron-overlay-backdrop
 youtube.com,youtube-nocookie.com###player-ads
@@ -101,13 +110,16 @@ youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements
 youtube.com,youtube-nocookie.com##+js(set-constant, playerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##div#player-ads
-	!!YouTube Experimental
+	!! YouTube Experimental
 ||consent.google.com^
 ||consent.youtube.com^
+! We don't need any suggestion
+||suggestqueries-clients6.youtube.com^
 
-youtube.com##.ytp-ad-progress-list
 
-! Discord Tracking
+! Discord
+discord.com##.colorDefault-22HBa0
+discord.com##.quickswitcher-35bYg4
 ||crash.discord.com^
 ||crash.discordapp.com^
 ||discord.com/api/*/applications/detectable
@@ -115,11 +127,15 @@ youtube.com##.ytp-ad-progress-list
 ||discord.com/api/*/rtc/quality-report
 ||discord.com/api/*/science
 ||discord.com/api/*/track
+||discord.com/api/*/typing
 ||discord.com/api/*/users/@me?with_analytics_token=true
 ||discord.com/api/science
 ||discord.com/api/track
 ||report-uri.cloudflare.com^
 ||sentry.io^
+||client-analytics.braintreegateway.com^
+||origin-analytics-prod.production.braintree-api.com^
+
 
 ! Facebook
 ||ads.facebook.com^
@@ -127,30 +143,37 @@ youtube.com##.ytp-ad-progress-list
 ||facebook.com/common/cavalry_endpoint.php?
 ||facebook.com/tr$3p
 ||pixel.facebook.com^
+||connect.facebook.net^$3p,domain=~facebook.com|~fb.com
 
-! Remove a Nord VPN ad from BrowserLeaks.com
+! BrowserLeaks.com
 browserleaks.com###efvi_img
 browserleaks.com###efvi_text
 
-! Remove Ads and Trackers from Adjaranet
+! Adjaranet
 adjaranet.com##.bcMSeG.sc-1a0vp7y-0
+adjaranet.com##.bgUhLZ.sc-1a0vp7y-0
 adjaranet.com##.blhZtf.sc-1a0vp7y-0
 adjaranet.com##.dZlTWE.sc-1a0vp7y-0
+adjaranet.com##.gQBTDQ.grvmck-0  /* Comments section */
+adjaranet.com##.glYUMY.sc-1a0vp7y-0
 adjaranet.com##.hdaBUM.sc-1a0vp7y-0
+adjaranet.com##.jPhYCs.n5cblh-4
 adjaranet.com##.lEFkD.sc-1a0vp7y-0
 adjaranet.com##.ldChrm.sc-1a0vp7y-0
-adjaranet.com##.like-share.kxszRd.grvmck-3
+adjaranet.com##.lgfAec.sc-1a0vp7y-0
+adjaranet.com##.like-share.kxszRd.grvmck-3 /* Share & Like */
 adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
+||adocean.pl/files/html/iframe.html
 ||bms1.adjarabet.com^
 ||bmscontent1.adjarabet.com^
 ||counter.top.ge^
+||open5.myvideo.ge^
+||trgde.adocean.pl^
 !! Blocking Facebook breaks Comments section
 ||facebook.com^$domain=adjaranet.com
 ||facebook.net^$domain=adjaranet.com
-||open5.myvideo.ge^
-||trgde.adocean.pl^
 
-! Remove Ads and prevent tracking from Twitch
+! Twitch
 ||amazon-adsystem.com^
 ||app.link^
 ||beacon.krxd.net^
@@ -162,8 +185,8 @@ adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||spade.sci.twitch.tv^$3p
 ||twitch.tv/track/
 
-! Remove ads and prevent tracking from iMovies.cc
-!! va.da.ge is Original just in case
+! iMovies.cc
+imovies.cc##.fade-ready.download-app-popup
 imovies.cc##.mobile-baber
 imovies.cc##.mobile-header-banner.header-banner
 imovies.cc##.mt-35
@@ -172,7 +195,8 @@ imovies.cc##.spinner-banner
 imovies.cc##[src="https://open5.myvideo.ge/delivery/afrs2.php?zid=201&cb=0.013296659866074534"]
 imovies.cc##[src="https://open5.myvideo.ge/delivery/afrs2.php?zid=303&cb=0.4309683877017283"]
 imovies.cc##div.d-sm-block.d-none
-||api.imovies.cc/api/*/logger 
+||api.imovies.cc/api/*/logger
+!! va.da.ge is Original just in case
 ||da.ge^
 ||facebook.com^$domain=imovies.cc
 ||facebook.net^$domain=imovies.cc
@@ -188,18 +212,15 @@ autopapa.ge###cboxOverlay
 ||widget.siteheart.com^$3p
 
 ! Srulad.com
-srulad.com##.d-sm-block.d-none.m-b-15.row
+srulad.com###pause_banner
 srulad.com##.d-sm-block.d-none.pause_banner_ad
 srulad.com##.fixed-ads.d-sm-block.d-none.p-l-0.col-lg-5
 srulad.com##.loaded.d-xxl-none.d-sm-block.d-none.m-t-15.lazyLoad
-srulad.com##.m-t-15.m-b-15.row
-srulad.com##.pull-right > div
+srulad.com##.pull-right
 srulad.com##.sticky.stickyAds
 srulad.com##[href^="https://www.crystalbet.com/Pages/AdsRedirect.aspx"]
 srulad.com##[src="/assets/banners/660-90.png?v=2"]
-srulad.com##div.m-b-15.row:nth-of-type(1)
-srulad.com##div.m-b-15.row:nth-of-type(10)
-srulad.com##div.m-b-15.row:nth-of-type(6)
+srulad.com##div.m-b-15.row
 ||apis.google.com/js/platform.js$domain=srulad.com
 ||code.createjs.com^$domain=srulad.com
 ||crystal-ad.ge^
@@ -246,8 +267,22 @@ zippyshare.com##.center_ad
 ||ds88pc0kw6cvc.cloudfront.net^
 ||www39.zippyshare.com/sw.js
 
+! Microsoft Teams
+||apac.presence.teams.microsoft.com/*/reportmyactivity/
+||browser.events.data.microsoft.com^
+||browser.pipe.aria.microsoft.com^
+||cxcs.microsoft.net/api/teamsgrowth/en-us/json/whatsnew/edu/student/whats-new
+||ic3.events.data.microsoft.com^
+||login.microsoftonline.com/common/handlers/watson
+||self.events.data.microsoft.com^
+||teams.events.data.microsoft.com^
+||teams.microsoft.com/*/ping
+||teams.microsoft.com/diagnostics
+!! breaks profile pictures ||teams.microsoft.com/api/*/cookie
+
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
+||a-ads.com^
 ||a.quora.com^
 ||aaxads.com^
 ||ad.initl.xiaomi.com^
@@ -256,8 +291,10 @@ zippyshare.com##.center_ad
 ||adocean.pl^
 ||ads.cc^
 ||ads.clip.ge^
+||ads.clp.ge^
 ||ads.metronome.ge^
 ||ads1-adnow.com^
+||adsafeprotected.com^
 ||adserver-us.adtech.advertising.com^
 ||adsrvr.org^
 ||adword.ge^
@@ -267,14 +304,18 @@ zippyshare.com##.center_ad
 ||analytics.grena.ge^
 ||anon-stats.eff.org^
 ||api-js.mixpanel.com/engage/?
+||api.mixpanel.com^
 ||apianalytics.adjara.com^
 ||appmetrica.yandex.com^
 ||appnexus.com^
 ||bizible.com^
 ||casalemedia.com^
+||cdn.onesignal.com^
+||cdn.taboola.com^
 ||chartbeat.com^
 ||cohesionapps.com^$3p
 ||confiant-integrations.global.ssl.fastly.net^
+||consensu.org^$3p
 ||counter.yadro.ru^
 ||crash.steampowered.com^
 ||crashlytics.twimg.com^
@@ -283,12 +324,14 @@ zippyshare.com##.center_ad
 ||do-not-tracker.org^
 ||duckduckgo.com/t/
 ||eviltracker.net^
+||exelator.com^
 ||geoads.ltd^
 ||go-mpulse.net^
 ||horizonme.net^
 ||improving.duckduckgo.com^
 ||intake-analytics.wikimedia.org^
 ||js-agent.newrelic.com^
+||librato-collector.genius.com^
 ||licdn.com/*li.lms-analytics/
 ||links.boom.ge^
 ||log.tiktokv.com^
@@ -307,14 +350,15 @@ zippyshare.com##.center_ad
 ||quantserve.com^
 ||reddit.com/static/pixel.png$image
 ||rlcdn.com^
+||rtcstats-server-pilot.jitsi.net
 ||rubiconproject.com^
 ||servedbyadbutler.com^
+||sessions.bugsnag.com^
 ||static.my.ge/*/js/banners.js
 ||stats.mydramalist.com^
 ||stats.wp.com^
 ||summerhamster.com^
 ||tags.tiqcdn.com^
-||teams.events.data.microsoft.com^
 ||telemetry.soundcloud.com^
 ||trackersimulator.org^
 ||trafficjunky.com^$3p
@@ -322,3 +366,6 @@ zippyshare.com##.center_ad
 ||webpushr.com^$3p
 ||wisepops.com^
 ||wordpress.com/geo/
+
+! Elements/Cosmetics filter
+##.widget_eu_cookie_law_widget.widget
