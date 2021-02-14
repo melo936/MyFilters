@@ -9,20 +9,25 @@
 
 ! Prevent Tracking URLs
 &pagereferrer=
+.openxtag.
 /OneCollector
 /activity
+/adchoices-
 /ads
 /ads/ga-audiences
 /ads_batch
 /adsanity
 /adsbygoogle
+/adsense/*
 /adsid/google/ui
 /advertisement_
 /ajax/eventlog?
 /api/stats
+/b/ss/*/js-
 /beacon
 /browser_reporting
 /busting/*/gtm-
+/cdn-cgi/bm/cv/*
 /client_204?$image,other,ping,script
 /count
 /csi_204?$image,other,ping,script
@@ -34,6 +39,7 @@
 /generate_204$image,other,ping,script
 /gtag
 /headerstats
+/id?d_visid_
 /internal_metrics
 /link-tracker-
 /log_event
@@ -46,13 +52,17 @@
 /ptracking
 /qoe?
 /reader/logging?
+/realtimeapi/impression?
+/referer_frame.
 /report
+/report_csp
 /reportmyactivity
 /thbeacon
 /track
 /tracking/csp
 /trigger_anonymous
-/videojs.ads.
+/video_ads/*
+/videojs.ads
 /wp-json/ads
 /www/delivery/*
 
@@ -64,7 +74,6 @@
 /angular8.js
 /apstag.js
 /asyncjs.php
-/autotrack.js
 /autotrack.js
 /beacon.js
 /chartbeat.js
@@ -81,7 +90,6 @@
 /statistics/statistics.php
 !! /twitch-videoad.js
 /urs.js
-.openxtag.
 
 ! Google
 www.google.*###_hDEdYIH4LZbakwWYh7jYAg1
@@ -100,6 +108,7 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ||google-analytics.com^
 ||google.com/imgevent$ping
 ||google.com/log
+||googleoptimize.com^$3p
 ||googlesyndication.com^
 ||googletagmanager.com^$3p
 ||googletagservices.com^$3p
@@ -113,7 +122,7 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ! YouTube
 ||youtube.com/api/stats/atr
 youtube.com###consent-bump
-youtube.com##.ytd-popup-container.style-scope
+!youtube.com##.ytd-popup-container.style-scope
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
 youtube.com###masthead-ad
 youtube.com###merch-shelf
@@ -153,14 +162,17 @@ discord.com##.quickswitcher-35bYg4
 ||client-analytics.braintreegateway.com^
 ||origin-analytics-prod.production.braintree-api.com^
 
-
 ! Facebook
 ||ads.facebook.com^
 ||analytics.facebook.com^
+||connect.facebook.net^$3p,domain=~facebook.com|~fb.com
 ||facebook.com/common/cavalry_endpoint.php?
 ||facebook.com/tr$3p
 ||pixel.facebook.com^
-||connect.facebook.net^$3p,domain=~facebook.com|~fb.com
+! Experimental
+/-PAXP-deijE.gif
+/altsvc-pixel.gif
+/hsts-pixel.gif
 
 ! BrowserLeaks.com
 browserleaks.com###efvi_img
@@ -222,6 +234,7 @@ imovies.cc##div.d-sm-block.d-none
 
 ! Twitter
 ||ads-twitter.com^
+||static.ads-twitter.com^
 
 ! AutoPapa.ge
 autopapa.ge###cboxContent
@@ -295,8 +308,8 @@ zippyshare.com##.center_ad
 ||self.events.data.microsoft.com^
 ||teams.events.data.microsoft.com^
 ||teams.microsoft.com/*/ping
-||teams.microsoft.com/diagnostics
-!! breaks profile pictures ||teams.microsoft.com/api/*/cookie
+!! ||teams.microsoft.com/api/*/cookie ! Breaks profile pictures
+!! ||teams.microsoft.com/diagnostics ! Breaks things
 
 ! My Auto
 @@||myauto.ge/templates/assets/img/img/pixel.gif$image,domain=www.myauto.ge
@@ -306,6 +319,29 @@ myauto.ge##div.mb-40.banner
 ||myauto.ge/templates/assets/js/build/ads/*
 ||seg.sharethis.com^
 ||static.my.ge/*/js/banners.js
+
+! Snapchat
+||ads-interfaces.sc-cdn.net^
+||ads.snapchat.com
+||app-analytics.snapchat.com
+||csp-central.appspot.com/report_csp
+||experience.snapchat.com
+||gcp.api.snapchat.com
+||sc-static.net^$3p
+||snapchat.com/*/user_location
+-sc-analytics.
+
+! Instagram
+||instagram.com/ajax/bz
+||instagram.com/logging/
+||instagram.com/logging_client_events
+||instagram.com/security/csp_report
+
+! Spotify
+||spotify.com/*/event/track
+||spotify.com/*/event/track-action
+/webpack/sp-analytics
+/webpack/tracking.
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
@@ -338,7 +374,12 @@ myauto.ge##div.mb-40.banner
 ||apianalytics.adjara.com^
 ||appmetrica.yandex.com^
 ||appnexus.com^
+||baresi.xyz^$3p
+||bat.bing.com^
 ||bizible.com^
+||browser.sentry-cdn.com^
+||bugherd.com^$3p
+||carbonads.com^
 ||casalemedia.com^
 ||cdn.onesignal.com^
 ||cdn.taboola.com^
@@ -346,35 +387,45 @@ myauto.ge##div.mb-40.banner
 ||cohesionapps.com^$3p
 ||confiant-integrations.global.ssl.fastly.net^
 ||consensu.org^$3p
+||cookielaw.org^
 ||counter.yadro.ru^
 ||crash.steampowered.com^
 ||crashlytics.twimg.com^
 ||criteo.net^
 ||demandbase.com^
+||demdex.net^
 ||do-not-tracker.org^
 ||duckduckgo.com/t/
 ||events.apester.com^
 ||eviltracker.net^
 ||exelator.com^
+||exponential.com^
+||exponential.com^
+||fwmrm.net/ad
 ||geoads.ltd^
 ||geolocation-db.com^
 ||go-mpulse.net^
 ||horizonme.net^
 ||hostedprebid.com^
-||hostedprebid.com^
 ||improving.duckduckgo.com^
 ||intake-analytics.wikimedia.org^
 ||interaction.apester.com/interaction-stats/*
+||ip-api.com^$3p
+||jads.co^$3p
 ||js-agent.newrelic.com^
+||juicyads.com^
 ||librato-collector.genius.com^
 ||licdn.com/*li.lms-analytics/
 ||links.boom.ge^
+||lo.v.liveperson.net^$3p
 ||log.tiktokv.com^
 ||logsvr.xmcsrv.net^
+||mc.yandex.ru^
 ||metrics.torproject.org^
 ||moatads.com^
 ||munchkin.marketo.net^
 ||nextdns.com^
+||ngfsciiu.com^
 ||nr-data.net^
 ||omappapi.com^
 ||onetrust.com^$ping
@@ -382,6 +433,9 @@ myauto.ge##div.mb-40.banner
 ||openx.palitra.ge/banerebi/*
 ||p.typekit.net^$3p
 ||ping.tapas.io^
+||pixel.wp.com^
+||popads.net^
+||prscripts.com^$3p
 ||pub.network^
 ||pubmatic.com^
 ||pubmine.com^
@@ -391,8 +445,11 @@ myauto.ge##div.mb-40.banner
 ||rtcstats-server-pilot.jitsi.net
 ||rubiconproject.com^
 ||sekindo.com^
+||servedby-buysellads.com^
 ||servedbyadbutler.com^
 ||sessions.bugsnag.com^
+||speedcurve.com^$3p
+||statcounter.com^$3p
 ||stats.mydramalist.com^
 ||stats.wp.com^
 ||summerhamster.com^
@@ -400,24 +457,33 @@ myauto.ge##div.mb-40.banner
 ||telemetry.soundcloud.com^
 ||track-eu.adformnet.akadns.net^
 ||trackersimulator.org^
+||trafficfactory.biz^
 ||trafficjunky.com^$3p
+||tribalfusion.com^
 ||trustx.org^
 ||twitter.com/i/jot
 ||webpushr.com^$3p
+||whoisvisiting.com^$3p
 ||wisepops.com^
 ||wordpress.com/geo/
 
 ! Elements/Cosmetics filter
+###ad-footer
+###ad-header-mobile-contener
 ###banner_left
 ###banner_right
 ###cookie-consent-wrap
+###video-ad
 ##.ad-table
 ##.ads_block
 ##.adsbygoogle
 ##.bannERTop.banner.div
 ##.banner-h-main.banner-h.banner
+##.cc_banner-wrapper
 ##.coockie_policy
 ##.cookie_policy
+##.remove-ads
+##.uffff_you_are_little_child
 ##.widget_eu_cookie_law_widget.widget
 ##[id^="div-gpt-ad-"]
 ##div.ads_block
