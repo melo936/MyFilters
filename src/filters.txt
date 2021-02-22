@@ -5,12 +5,13 @@
 ! 
 ! GitHub issues: https://github.com/dreammjow/MyFilters/issues
 ! GitHub pull requests: https://github.com/dreammjow/MyFilters/pulls
-! Special thanks to uBlockOrigin, Easylist and AdGuard! this list wouldn't be anything without their hard work, please support them.
+! Special thanks to uBlockOrigin, Easylist, Peter Lowe and AdGuard! this list wouldn't be anything without their hard work, please support them.
 
 ! Prevent Tracking URLs
+&maxads=
 &pagereferrer=
+.lms-analytics/
 .openxtag.
-/OneCollector
 /activity
 /adchoices-
 /ads
@@ -25,6 +26,7 @@
 /api/stats
 /b/ss/*/js-
 /beacon
+/bnr/*
 /browser_reporting
 /busting/*/gtm-
 /cdn-cgi/bm/cv/*
@@ -33,22 +35,29 @@
 /csi_204?$image,other,ping,script
 /cspreport
 /dlpageping?
+/entry_stats?
 /events
 /gen204?$image,other,ping,script
 /gen_204?$image,other,ping,script
 /generate_204$image,other,ping,script
+/graph?company_id=
 /gtag
 /headerstats
 /id?d_visid_
 /internal_metrics
+/jserror?
 /link-tracker-
 /log_event
+/logging:logClientAction
 /logimpressions?
 /m3d0s1
 /metrics
+/OneCollector
+/openx_
 /optimizely-
 /pagead
 /pixel
+/prebid/*
 /ptracking
 /qoe?
 /reader/logging?
@@ -57,6 +66,8 @@
 /report
 /report_csp
 /reportmyactivity
+/retargeting-pixels.
+/smetrics.*/b/ss/*
 /thbeacon
 /track
 /tracking/csp
@@ -67,6 +78,7 @@
 /www/delivery/*
 
 ! Prevent Tracking URLs v2 (www.example.nothing/analytics.js)
+!! /twitch-videoad.js
 /adblocker.js
 /ads-setup.js
 /analytics.js
@@ -77,6 +89,7 @@
 /autotrack.js
 /beacon.js
 /chartbeat.js
+/count.js
 /csp-report.php
 /fbevents.js
 /flo.js
@@ -86,9 +99,11 @@
 /honeybadger.min.js$3p
 /ht.js
 /matomo.js$domain=~github.com
+/monetate.js
 /mpulse.js
+/px.gif?
+/r.gif?
 /statistics/statistics.php
-!! /twitch-videoad.js
 /urs.js
 
 ! Google
@@ -120,9 +135,8 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ||gstaticadssl.l.google.com^
 
 ! YouTube
-||youtube.com/api/stats/atr
-youtube.com###consent-bump
 !youtube.com##.ytd-popup-container.style-scope
+youtube.com###consent-bump
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
 youtube.com###masthead-ad
 youtube.com###merch-shelf
@@ -136,6 +150,7 @@ youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements
 youtube.com,youtube-nocookie.com##+js(set-constant, playerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##div#player-ads
+||youtube.com/api/stats/atr
 	!! YouTube Experimental
 ||consent.google.com^
 ||consent.youtube.com^
@@ -146,6 +161,7 @@ youtube.com,youtube-nocookie.com##div#player-ads
 ! Discord
 discord.com##.colorDefault-22HBa0
 discord.com##.quickswitcher-35bYg4
+||client-analytics.braintreegateway.com^
 ||crash.discord.com^
 ||crash.discordapp.com^
 ||discord.com/api/*/applications/detectable
@@ -157,22 +173,27 @@ discord.com##.quickswitcher-35bYg4
 ||discord.com/api/*/users/@me?with_analytics_token=true
 ||discord.com/api/science
 ||discord.com/api/track
+||origin-analytics-prod.production.braintree-api.com^
 ||report-uri.cloudflare.com^
 ||sentry.io^
-||client-analytics.braintreegateway.com^
-||origin-analytics-prod.production.braintree-api.com^
 
 ! Facebook
+##.post-ads
+##.AdBox
 ||ads.facebook.com^
 ||analytics.facebook.com^
 ||connect.facebook.net^$3p,domain=~facebook.com|~fb.com
 ||facebook.com/common/cavalry_endpoint.php?
+||facebook.com/common/referer_frame.php
+||facebook.com/method/links.getstats?
 ||facebook.com/tr$3p
 ||pixel.facebook.com^
 ! Experimental
 /-PAXP-deijE.gif
 /altsvc-pixel.gif
 /hsts-pixel.gif
+||facebook.com/ajax/bnzai
+||facebook.com/nw/
 
 ! BrowserLeaks.com
 browserleaks.com###efvi_img
@@ -182,13 +203,18 @@ browserleaks.com###efvi_text
 adjaranet.com##.bcMSeG.sc-1a0vp7y-0
 adjaranet.com##.bgUhLZ.sc-1a0vp7y-0
 adjaranet.com##.blhZtf.sc-1a0vp7y-0
+adjaranet.com##.bQvqSG.sc-1a0vp7y-0
+adjaranet.com##.cLCRHn.sc-1a0vp7y-0
 adjaranet.com##.dZlTWE.sc-1a0vp7y-0
-adjaranet.com##.gQBTDQ.grvmck-0  /* Comments section */
 adjaranet.com##.glYUMY.sc-1a0vp7y-0
+adjaranet.com##.gQBTDQ.grvmck-0  /* Comments section */
 adjaranet.com##.hdaBUM.sc-1a0vp7y-0
+adjaranet.com##.inpgtl.sc-1a0vp7y-0
+adjaranet.com##.iuzgwW.sc-1a0vp7y-0
 adjaranet.com##.jPhYCs.n5cblh-4
-adjaranet.com##.lEFkD.sc-1a0vp7y-0
+adjaranet.com##.kccstu.sc-1a0vp7y-0
 adjaranet.com##.ldChrm.sc-1a0vp7y-0
+adjaranet.com##.lEFkD.sc-1a0vp7y-0
 adjaranet.com##.lgfAec.sc-1a0vp7y-0
 adjaranet.com##.like-share.kxszRd.grvmck-3 /* Share & Like */
 adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
@@ -234,7 +260,7 @@ imovies.cc##div.d-sm-block.d-none
 
 ! Twitter
 ||ads-twitter.com^
-||static.ads-twitter.com^
+||analytics.twitter.com^
 
 ! AutoPapa.ge
 autopapa.ge###cboxContent
@@ -302,6 +328,8 @@ zippyshare.com##.center_ad
 ||apac.presence.teams.microsoft.com/*/reportmyactivity/
 ||browser.events.data.microsoft.com^
 ||browser.pipe.aria.microsoft.com^
+||codepush.appcenter.ms^
+||codepush.teams.microsoft.com^
 ||cxcs.microsoft.net/api/teamsgrowth/en-us/json/whatsnew/edu/student/whats-new
 ||ic3.events.data.microsoft.com^
 ||login.microsoftonline.com/common/handlers/watson
@@ -338,29 +366,62 @@ myauto.ge##div.mb-40.banner
 ||instagram.com/security/csp_report
 
 ! Spotify
+||google.com^$domain=open.spotify.com
+||guc-spclient.spotify.com/*/events
+||guc-spclient.spotify.com/melody/*/logging
+||guc-spclient.spotify.com/track-playback/v1/devices
+||pixel-static.spotify.com^
+||pixel.spotify.com^
+||scdn.co/*/js/gtm
+||scdn.co/static/js/baba.js$script,domain=spotify.com
 ||spotify.com/*/event/track
 ||spotify.com/*/event/track-action
+||spotify.com/*/metric
+@@||api.spotify.com/*/tracks
+@@||guc-spclient.spotify.com/track-playback/*
+@@||open.scdn.co/*/tracklist-placeholder.
 /webpack/sp-analytics
 /webpack/tracking.
 
+! ProtonVPN
+@@||protonvpn.com/*/events
+
+! Ghacks
+ghacks.net##.ghacks-ad
+||datadoghq-browser-agent.com^
+||ghacks.net/*/px.gif
+
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
+||360yield.com^
+||3lift.com^
 ||a-ads.com^
+||a-mo.net^
 ||a.quora.com^
 ||aaxads.com^
 ||ad.initl.xiaomi.com^
 ||adbrix.io^
+||adentifi.com^
 ||adform.net^
+||adhigh.net^
+||admanmedia.com^
 ||admixer.net^
+||adnxs.com^
 ||adocean.pl^
+||adotmob.com^
+||ads.avct.cloud^
 ||ads.cc^
 ||ads.clip.ge^
 ||ads.clp.ge^
+||ads.linkedin.com^
 ||ads.metronome.ge^
+||ads.programattik.com^
+||ads.stickyadstv.com^
 ||ads1-adnow.com^
 ||adsafeprotected.com^
 ||adserver-us.adtech.advertising.com^
 ||adsrvr.org^
+||advertising.com^
 ||adword.ge^
 ||alb.reddit.com^
 ||alexametrics.com^
@@ -368,6 +429,7 @@ myauto.ge##div.mb-40.banner
 ||analytics.adjara.com^
 ||analytics.grena.ge^
 ||analytics.palitra.ge^
+||analytics.yahoo.com^
 ||anon-stats.eff.org^
 ||api-js.mixpanel.com/engage/?
 ||api.mixpanel.com^
@@ -376,7 +438,13 @@ myauto.ge##div.mb-40.banner
 ||appnexus.com^
 ||baresi.xyz^$3p
 ||bat.bing.com^
+||beacon.lynx.cognitivlabs.com^
+||bh.contextweb.com^
+||bidr.io^
+||bidswitch.net^
 ||bizible.com^
+||bluekai.com^
+||brand-display.com^
 ||browser.sentry-cdn.com^
 ||bugherd.com^$3p
 ||carbonads.com^
@@ -384,18 +452,26 @@ myauto.ge##div.mb-40.banner
 ||cdn.onesignal.com^
 ||cdn.taboola.com^
 ||chartbeat.com^
+||clc.stackoverflow.com^
+||cloudfastads.ru^
+||cloudflareinsights.com^$3p
 ||cohesionapps.com^$3p
 ||confiant-integrations.global.ssl.fastly.net^
 ||consensu.org^$3p
+||contextweb.com^
 ||cookielaw.org^
 ||counter.yadro.ru^
 ||crash.steampowered.com^
 ||crashlytics.twimg.com^
+||crazyegg.com^$3p
 ||criteo.net^
+||crwdcntrl.net^
 ||demandbase.com^
+||demdex.net^
 ||demdex.net^
 ||do-not-tracker.org^
 ||duckduckgo.com/t/
+||eqads.com^
 ||events.apester.com^
 ||eviltracker.net^
 ||exelator.com^
@@ -407,6 +483,7 @@ myauto.ge##div.mb-40.banner
 ||go-mpulse.net^
 ||horizonme.net^
 ||hostedprebid.com^
+||hs-analytics.net^
 ||improving.duckduckgo.com^
 ||intake-analytics.wikimedia.org^
 ||interaction.apester.com/interaction-stats/*
@@ -414,16 +491,25 @@ myauto.ge##div.mb-40.banner
 ||jads.co^$3p
 ||js-agent.newrelic.com^
 ||juicyads.com^
+||kost.tv^
+||l.sharethis.com^
 ||librato-collector.genius.com^
 ||licdn.com/*li.lms-analytics/
+||lijit.com^
+||linkedin.com/countserv/count/
 ||links.boom.ge^
 ||lo.v.liveperson.net^$3p
+||log.pinterest.com^
 ||log.tiktokv.com^
 ||logsvr.xmcsrv.net^
 ||mc.yandex.ru^
+||mediavine.com^
 ||metrics.torproject.org^
+||mfadsrvr.com^
 ||moatads.com^
+||monetate.net^
 ||munchkin.marketo.net^
+||news.2xclick.ru^
 ||nextdns.com^
 ||ngfsciiu.com^
 ||nr-data.net^
@@ -441,14 +527,19 @@ myauto.ge##div.mb-40.banner
 ||pubmine.com^
 ||quantserve.com^
 ||reddit.com/static/pixel.png$image
+||reports.protonmail.ch^
 ||rlcdn.com^
 ||rtcstats-server-pilot.jitsi.net
 ||rubiconproject.com^
+||sape.ru^
 ||sekindo.com^
 ||servedby-buysellads.com^
 ||servedbyadbutler.com^
 ||sessions.bugsnag.com^
+||sharethrough.com^
+||smartadserver.com^
 ||speedcurve.com^$3p
+||spotxchange.com^
 ||statcounter.com^$3p
 ||stats.mydramalist.com^
 ||stats.wp.com^
@@ -461,11 +552,14 @@ myauto.ge##div.mb-40.banner
 ||trafficjunky.com^$3p
 ||tribalfusion.com^
 ||trustx.org^
+||turn.com^
 ||twitter.com/i/jot
+||w55c.net^
 ||webpushr.com^$3p
 ||whoisvisiting.com^$3p
 ||wisepops.com^
 ||wordpress.com/geo/
+||zemanta.com^
 
 ! Elements/Cosmetics filter
 ###ad-footer
@@ -473,16 +567,35 @@ myauto.ge##div.mb-40.banner
 ###banner_left
 ###banner_right
 ###cookie-consent-wrap
+###dfp-tlb
 ###video-ad
 ##.ad-table
+##.ad_space
 ##.ads_block
+##.adsbox
 ##.adsbygoogle
-##.bannERTop.banner.div
+##.adSpace
+##.adWrap
 ##.banner-h-main.banner-h.banner
+##.bannERTop.banner.div
 ##.cc_banner-wrapper
 ##.coockie_policy
 ##.cookie_policy
+##.headerad
+##.headerads
 ##.remove-ads
+##.td-a-ad
+##.td-a-rec-id-custom_ad_1
+##.td-a-rec-id-custom_ad_2
+##.td-a-rec-id-custom_ad_3
+##.td-a-rec-id-custom_ad_4
+##.td-a-rec-id-custom_ad_5
+##.td-a-rec-id-custom_ad_5
+##.td-a-rec-id-event_bottom_ad
+##.td-a-rec-id-h12_obj_bottom_ad
+##.td-a-rec-id-h3_object_bottom_ad
+##.td-a-rec-id-ud_b4x_post_ad
+##.td-ad
 ##.uffff_you_are_little_child
 ##.widget_eu_cookie_law_widget.widget
 ##[id^="div-gpt-ad-"]
