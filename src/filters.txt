@@ -5,16 +5,18 @@
 ! 
 ! GitHub issues: https://github.com/dreammjow/MyFilters/issues
 ! GitHub pull requests: https://github.com/dreammjow/MyFilters/pulls
-! Special thanks to uBlockOrigin, Easylist, Peter Lowe and AdGuard! this list wouldn't be anything without their hard work, please support them.
+! Credits: uBlockOrigin, Easylist, Peter Lowe, Brave team and AdGuard! This list wouldn't be a thing without their hard work, please support them.
 
 ! Prevent Tracking URLs
 &maxads=
 &pagereferrer=
+&vis
 .lms-analytics/
 .openxtag.
 /activity
 /adchoices-
 /ads
+/ads-iframe
 /ads/ga-audiences
 /ads_batch
 /adsanity
@@ -33,10 +35,12 @@
 /client_204?$image,other,ping,script
 /count
 /csi_204?$image,other,ping,script
+/csp_report
 /cspreport
 /dlpageping?
 /entry_stats?
 /events
+/exti
 /gen204?$image,other,ping,script
 /gen_204?$image,other,ping,script
 /generate_204$image,other,ping,script
@@ -62,9 +66,10 @@
 /qoe?
 /reader/logging?
 /realtimeapi/impression?
-/referer_frame.
+/referer_frame
 /report
 /report_csp
+/reportAnalytics
 /reportmyactivity
 /retargeting-pixels.
 /smetrics.*/b/ss/*
@@ -86,6 +91,7 @@
 /angular8.js
 /apstag.js
 /asyncjs.php
+/atb.js
 /autotrack.js
 /beacon.js
 /chartbeat.js
@@ -147,6 +153,7 @@ youtube.com##div#masthead-ad
 youtube.com##iron-overlay-backdrop
 youtube.com,youtube-nocookie.com###player-ads
 youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
+youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##+js(set-constant, playerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##div#player-ads
@@ -178,22 +185,29 @@ discord.com##.quickswitcher-35bYg4
 ||sentry.io^
 
 ! Facebook
-##.post-ads
 ##.AdBox
+##.post-ads
+facebook.com##.e3zsy2ct.cx39uazk.qmfd67dx.mz2297xg.ox1siiyg.oh7imozk.f9o22wc5.oygrvhab.ad2k81qe.kvgmc6g5
+facebook.com##.l9j0dhe7.buofh1pr.cbu4d94t.j83agx80 > .cxgpxx05 > div > span
 ||ads.facebook.com^
 ||analytics.facebook.com^
+||connect.facebook.net/*/sdk.js
+||connect.facebook.net/*/signals/config
 ||connect.facebook.net^$3p,domain=~facebook.com|~fb.com
 ||facebook.com/common/cavalry_endpoint.php?
 ||facebook.com/common/referer_frame.php
 ||facebook.com/method/links.getstats?
-||facebook.com/tr$3p
+||facebook.com/tr
+||graph.facebook.com/*/adspixels
 ||pixel.facebook.com^
 ! Experimental
 /-PAXP-deijE.gif
 /altsvc-pixel.gif
 /hsts-pixel.gif
 ||facebook.com/ajax/bnzai
+||facebook.com/ajax/timezone
 ||facebook.com/nw/
+
 
 ! BrowserLeaks.com
 browserleaks.com###efvi_img
@@ -218,12 +232,11 @@ adjaranet.com##.lEFkD.sc-1a0vp7y-0
 adjaranet.com##.lgfAec.sc-1a0vp7y-0
 adjaranet.com##.like-share.kxszRd.grvmck-3 /* Share & Like */
 adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
-||adocean.pl/files/html/iframe.html
+||adocean.pl^
 ||bms1.adjarabet.com^
 ||bmscontent1.adjarabet.com^
 ||counter.top.ge^
 ||open5.myvideo.ge^
-||trgde.adocean.pl^
 !! Blocking Facebook breaks Comments section
 ||facebook.com^$domain=adjaranet.com
 ||facebook.net^$domain=adjaranet.com
@@ -326,11 +339,13 @@ zippyshare.com##.center_ad
 
 ! Microsoft Teams
 ||apac.presence.teams.microsoft.com/*/reportmyactivity/
+||appsforoffice.microsoft.com/*/telemetry
 ||browser.events.data.microsoft.com^
 ||browser.pipe.aria.microsoft.com^
 ||codepush.appcenter.ms^
 ||codepush.teams.microsoft.com^
 ||cxcs.microsoft.net/api/teamsgrowth/en-us/json/whatsnew/edu/student/whats-new
+||euc-word-edit.officeapps.live.com/we/RemoteTelemetry.ashx
 ||ic3.events.data.microsoft.com^
 ||login.microsoftonline.com/common/handlers/watson
 ||self.events.data.microsoft.com^
@@ -404,6 +419,7 @@ ghacks.net##.ghacks-ad
 ||adentifi.com^
 ||adform.net^
 ||adhigh.net^
+||adincube.com^
 ||admanmedia.com^
 ||admixer.net^
 ||adnxs.com^
@@ -416,6 +432,7 @@ ghacks.net##.ghacks-ad
 ||ads.linkedin.com^
 ||ads.metronome.ge^
 ||ads.programattik.com^
+||ads.sportads.ge^
 ||ads.stickyadstv.com^
 ||ads1-adnow.com^
 ||adsafeprotected.com^
@@ -604,3 +621,7 @@ ghacks.net##.ghacks-ad
 ##div[id^="div-gpt-ad"]
 ##div[id^="div-gpt-ad-"]
 ##ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
+#.privacy-banner
+
+!Fixes
+@@track_*.png
