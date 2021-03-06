@@ -13,11 +13,11 @@ It can also be used with [Vivaldi](https://vivaldi.com/download/) and other brow
 
 ## Credits:
 
-> * [Easylist](https://github.com/easylist)
-> * [uBlockOrigin](https://github.com/uBlockOrigin)
-> * [Peter Lowe](https://pgl.yoyo.org/)
-> * [Brave](https://github.com/brave)
-> * [AdGuard](https://github.com/adguard)
+* [Easylist](https://github.com/easylist)
+* [uBlockOrigin](https://github.com/uBlockOrigin)
+* [Peter Lowe](https://pgl.yoyo.org/)
+* [Brave](https://github.com/brave)
+* [AdGuard](https://github.com/adguard)
 
 ## License:
 Licensed under GNU General Public License v3.0
