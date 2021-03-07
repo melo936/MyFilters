@@ -215,30 +215,18 @@ browserleaks.com###efvi_img
 browserleaks.com###efvi_text
 
 ! Adjaranet
-adjaranet.com##.bcMSeG.sc-1a0vp7y-0
-adjaranet.com##.bgUhLZ.sc-1a0vp7y-0
-adjaranet.com##.blhZtf.sc-1a0vp7y-0
-adjaranet.com##.bQvqSG.sc-1a0vp7y-0
-adjaranet.com##.cLCRHn.sc-1a0vp7y-0
-adjaranet.com##.dZlTWE.sc-1a0vp7y-0
-adjaranet.com##.glYUMY.sc-1a0vp7y-0
 adjaranet.com##.gQBTDQ.grvmck-0  /* Comments section */
-adjaranet.com##.hdaBUM.sc-1a0vp7y-0
-adjaranet.com##.inpgtl.sc-1a0vp7y-0
-adjaranet.com##.iuzgwW.sc-1a0vp7y-0
+adjaranet.com##.hedgehog-overlay-gg
 adjaranet.com##.jPhYCs.n5cblh-4
-adjaranet.com##.kccstu.sc-1a0vp7y-0
-adjaranet.com##.ldChrm.sc-1a0vp7y-0
-adjaranet.com##.lEFkD.sc-1a0vp7y-0
-adjaranet.com##.lgfAec.sc-1a0vp7y-0
 adjaranet.com##.like-share.kxszRd.grvmck-3 /* Share & Like */
+adjaranet.com##.sc-1a0vp7y-0
 adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||adocean.pl^
 ||bms1.adjarabet.com^
 ||bmscontent1.adjarabet.com^
 ||counter.top.ge^
 ||open5.myvideo.ge^
-!! Blocking Facebook breaks Comments section
+!! Blocking Facebook breaks Comments section. Howeverm we don't give a damn people' stupid opinions about movies
 ||facebook.com^$domain=adjaranet.com
 ||facebook.net^$domain=adjaranet.com
 
@@ -256,15 +244,11 @@ adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||twitch.tv/track/
 
 ! iMovies.cc
-imovies.cc##.fade-ready.download-app-popup
-imovies.cc##.mobile-baber
-imovies.cc##.mobile-header-banner.header-banner
-imovies.cc##.mt-35
+!breaks everything on Android imovies.cc##.fade-ready.download-app-popup
+imovies.cc##.ggg-container
+imovies.cc##.header-banner
 imovies.cc##.playlist-banner-cont
 imovies.cc##.spinner-banner
-imovies.cc##[src="https://open5.myvideo.ge/delivery/afrs2.php?zid=201&cb=0.013296659866074534"]
-imovies.cc##[src="https://open5.myvideo.ge/delivery/afrs2.php?zid=303&cb=0.4309683877017283"]
-imovies.cc##div.d-sm-block.d-none
 ||api.imovies.cc/api/*/logger
 !! va.da.ge is Original just in case
 ||da.ge^
@@ -586,6 +570,8 @@ ghacks.net##.ghacks-ad
 ###banner_right
 ###cookie-consent-wrap
 ###dfp-tlb
+###dfsfsdfs-asdasd-2
+###iubenda-cs-banner
 ###video-ad
 ##.ad-table
 ##.ad_space
@@ -594,13 +580,16 @@ ghacks.net##.ghacks-ad
 ##.adsbygoogle
 ##.adSpace
 ##.adWrap
+##.banner-catfish
 ##.banner-h-main.banner-h.banner
 ##.bannERTop.banner.div
 ##.cc_banner-wrapper
 ##.coockie_policy
 ##.cookie_policy
+##.fixed-ad2.fixed-ad
 ##.headerad
 ##.headerads
+##.js-consent-banner
 ##.remove-ads
 ##.td-a-ad
 ##.td-a-rec-id-custom_ad_1
@@ -619,10 +608,9 @@ ghacks.net##.ghacks-ad
 ##[id^="div-gpt-ad-"]
 ##div.ads_block
 ##div.banner.div
+##div.gadsens-ad
 ##div[id^="div-gpt-ad"]
 ##div[id^="div-gpt-ad-"]
 ##ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
-#.privacy-banner
-
 !Fixes
 @@track_*.png
