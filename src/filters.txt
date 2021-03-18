@@ -127,20 +127,23 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ||doubleclick.net^
 ||fundingchoicesmessages.google.com^$3p
 ||google-analytics.com^
-||google.com/imgevent$ping
-||google.com/log
+||google.*/imgevent$ping
+||google.*/log
 ||googleoptimize.com^$3p
 ||googlesyndication.com^
 ||googletagmanager.com^$3p
 ||googletagservices.com^$3p
-||mail-ads.google.com^
-||www.google.*/_/VisualFrontendUi/browserinfo
-||www.google.*/_/VisualFrontendUi/jserror
-||www.google.*/client_204
+||mail-ads.google.*^
+||google.*/_/VisualFrontendUi/browserinfo
+||google.*/_/VisualFrontendUi/jserror
+||google.*/client_204
+||googleapis.*/identitytoolkit/*
+||firebasestorage.googleapis.com^$3p
 ! Experimental
 ||gstaticadssl.l.google.com^
 
 ! YouTube
+youtube.com###clarify-box
 youtube.com###consent-bump
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
 youtube.com###country-code
@@ -148,6 +151,7 @@ youtube.com###masthead-ad
 youtube.com###merch-shelf
 youtube.com###offer-module
 youtube.com###ticker.ytd-masthead
+youtube.com###voice-search-button
 youtube.com##.ytd-popup-container
 youtube.com##.ytp-ad-progress-list
 youtube.com##div#masthead-ad
@@ -157,8 +161,9 @@ youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements
 youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##+js(set-constant, playerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##.iv-branding
 youtube.com,youtube-nocookie.com##div#player-ads
-||youtube.com/api/stats/atr
+||youtube.com/api/stats
 	!! YouTube Experimental
 ||consent.google.com^
 ||consent.youtube.com^
@@ -293,6 +298,7 @@ srulad.com##div.m-b-15.row
 mail.ru##.tgb__link
 mail.ru##.trg-b-banner
 mail.ru##.trg-banners
+||ad.mail.ru^
 
 ! Forum.ge
 forum.ge###advert-three
@@ -514,6 +520,7 @@ ghacks.net##.ghacks-ad
 ||news.2xclick.ru^
 ||nextdns.com^
 ||ngfsciiu.com^
+||notsy.io^$3p
 ||nr-data.net^
 ||omappapi.com^
 ||onetrust.com^$ping
@@ -580,6 +587,9 @@ ghacks.net##.ghacks-ad
 ##.adsbygoogle
 ##.adSpace
 ##.adWrap
+##.baner-bottom
+##.baner-left
+##.baner-right
 ##.banner-catfish
 ##.banner-h-main.banner-h.banner
 ##.bannERTop.banner.div
@@ -587,6 +597,7 @@ ghacks.net##.ghacks-ad
 ##.coockie_policy
 ##.cookie_policy
 ##.fixed-ad2.fixed-ad
+##.header-baner
 ##.headerad
 ##.headerads
 ##.js-consent-banner
@@ -612,5 +623,6 @@ ghacks.net##.ghacks-ad
 ##div[id^="div-gpt-ad"]
 ##div[id^="div-gpt-ad-"]
 ##ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
-!Fixes
+
+! Fixes
 @@track_*.png
