@@ -143,6 +143,8 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ||gstaticadssl.l.google.com^
 
 ! YouTube
+www.youtube.com##.opened
+www.youtube.com##.ytd-popup-container.style-scope > .ytd-popup-container.style-scope
 youtube.com###clarify-box
 youtube.com###consent-bump
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
@@ -152,7 +154,6 @@ youtube.com###merch-shelf
 youtube.com###offer-module
 youtube.com###ticker.ytd-masthead
 youtube.com###voice-search-button
-youtube.com##.ytd-popup-container
 youtube.com##.ytp-ad-progress-list
 youtube.com##div#masthead-ad
 youtube.com##iron-overlay-backdrop
