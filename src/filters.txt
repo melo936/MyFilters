@@ -221,6 +221,7 @@ browserleaks.com###efvi_img
 browserleaks.com###efvi_text
 
 ! Adjaranet
+@@adjaranet.com/*/countries?
 adjaranet.com##.gQBTDQ.grvmck-0  /* Comments section */
 adjaranet.com##.hedgehog-overlay-gg
 adjaranet.com##.jPhYCs.n5cblh-4
