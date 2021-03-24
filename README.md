@@ -19,5 +19,8 @@ It can also be used with [Vivaldi](https://vivaldi.com/download/) and other brow
 * [Brave](https://github.com/brave)
 * [AdGuard](https://github.com/adguard)
 
+## Donation
+Monero: `46FQDwvrc3uNAEGrptoMSwY3oAdmFNVnjc8jzkCTw9MG9XTstDU2JwjTADyphKhqDw9mKBjU8eaUacLErHmDqvvWFpCQW3N`
+
 ## License:
 Licensed under GNU General Public License v3.0
