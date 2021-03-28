@@ -143,8 +143,9 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ||gstaticadssl.l.google.com^
 
 ! YouTube
+www.youtube.com###dialog
 www.youtube.com##.opened
-www.youtube.com##ytd-popup-container.ytd-app.style-scope > .ytd-popup-container.style-scope
+www.youtube.com##.no-transition.yt-upsell-dialog-renderer.style-scope > .yt-img-shadow.style-scope
 youtube.com###clarify-box
 youtube.com###consent-bump
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
