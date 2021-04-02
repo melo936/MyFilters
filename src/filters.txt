@@ -110,6 +110,7 @@
 /px.gif?
 /r.gif?
 /statistics/statistics.php
+/tracking.js
 /urs.js
 
 ! Google
@@ -392,9 +393,6 @@ myauto.ge##div.mb-40.banner
 /webpack/sp-analytics
 /webpack/tracking.
 
-! ProtonVPN
-@@||protonvpn.com/*/events
-
 ! Ghacks
 ghacks.net##.ghacks-ad
 ||datadoghq-browser-agent.com^
@@ -629,3 +627,5 @@ ghacks.net##.ghacks-ad
 
 ! Fixes
 @@track_*.png
+@@||nextdns.io/configurations/*/analytics/
+@@||protonvpn.com/*/events
