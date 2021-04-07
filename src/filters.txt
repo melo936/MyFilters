@@ -25,6 +25,7 @@
 /adsid/google/ui
 /advertisement_
 /ajax/eventlog?
+/analytics
 /api/stats
 /b/ss/*/js-
 /beacon
@@ -72,6 +73,7 @@
 /reportAnalytics
 /reportmyactivity
 /retargeting-pixels.
+/sentry
 /smetrics.*/b/ss/*
 /thbeacon
 /track
@@ -95,6 +97,7 @@
 /autotrack.js
 /beacon.js
 /chartbeat.js
+/consent-tracking-api.js
 /count.js
 /csp-report.php
 /fbevents.js
@@ -104,7 +107,7 @@
 /gtm.js
 /honeybadger.min.js$3p
 /ht.js
-/matomo.js$domain=~github.com
+/matomo.js$
 /monetate.js
 /mpulse.js
 /px.gif?
