@@ -144,7 +144,7 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 ||googleapis.*/identitytoolkit/*
 ||firebasestorage.googleapis.com^$3p
 ! Experimental
-||gstaticadssl.l.google.com^
+!! It is just fonts ||gstaticadssl.l.google.com^
 
 ! YouTube
 www.youtube.com###dialog
@@ -171,11 +171,10 @@ youtube.com,youtube-nocookie.com##.iv-branding
 youtube.com,youtube-nocookie.com##div#player-ads
 ||youtube.com/api/stats
 	!! YouTube Experimental
-||consent.google.com^
-||consent.youtube.com^
+||consent.google.*^$3p
+||consent.youtube.com^$3p
 ! We don't need any suggestion
 ||suggestqueries-clients6.youtube.com^
-
 
 ! Discord
 discord.com##.colorDefault-22HBa0
@@ -219,7 +218,6 @@ facebook.com##.l9j0dhe7.buofh1pr.cbu4d94t.j83agx80 > .cxgpxx05 > div > span
 ||facebook.com/ajax/bnzai
 ||facebook.com/ajax/timezone
 ||facebook.com/nw/
-
 
 ! BrowserLeaks.com
 browserleaks.com###efvi_img
