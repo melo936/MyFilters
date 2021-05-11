@@ -13,8 +13,8 @@
 &vis
 .lms-analytics/
 .openxtag.
-/activity
 /OneCollector
+/activity
 /adchoices-
 /ads
 /ads-iframe
