@@ -33,6 +33,7 @@
 /beacon
 /bnr/*
 /browser_reporting
+/browserinfo
 /busting/*/gtm-
 /cdn-cgi/bm/cv/*
 /client_204?$image,other,ping,script
@@ -185,8 +186,10 @@ discord.com##.quickswitcher-35bYg4
 ||crash.discordapp.com^
 ||discord.com/api/*/applications/detectable
 ||discord.com/api/*/experiments
+||discord.com/api/*/location-metadata
 ||discord.com/api/*/rtc/quality-report
 ||discord.com/api/*/science
+||discord.com/api/*/survey
 ||discord.com/api/*/track
 ||discord.com/api/*/typing
 ||discord.com/api/*/users/@me?with_analytics_token=true
@@ -631,3 +634,5 @@ ghacks.net##.ghacks-ad
 @@track_*.png
 @@||nextdns.io/configurations/*/analytics/
 @@||protonvpn.com/*/events
+@@||protonmail.com/api/*/count
+@@||protonmail.com/api/*/events/
