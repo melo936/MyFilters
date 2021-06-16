@@ -45,9 +45,9 @@
 /entry_stats?
 /events
 /exti
-/gen204?$image,other,ping,script
-/gen_204?$image,other,ping,script
-/generate_204$image,other,ping,script
+/gen204
+/gen_204
+/generate_204
 /graph?company_id=
 /gtag
 /headerstats
@@ -149,9 +149,6 @@ www.google.*##html.QVCmK:style(overflow: auto !important;)
 !! It is just fonts ||gstaticadssl.l.google.com^
 
 ! YouTube
-www.youtube.com###dialog
-www.youtube.com##.opened
-www.youtube.com##.no-transition.yt-upsell-dialog-renderer.style-scope > .yt-img-shadow.style-scope
 youtube.com###clarify-box
 youtube.com###consent-bump
 youtube.com###content > .style-scope > .ytd-compact-promoted-item-renderer
@@ -161,6 +158,7 @@ youtube.com###merch-shelf
 youtube.com###offer-module
 youtube.com###ticker.ytd-masthead
 youtube.com###voice-search-button
+youtube.com##+js(cookie-remover, PREF)
 youtube.com##.ytp-ad-progress-list
 youtube.com##div#masthead-ad
 youtube.com##iron-overlay-backdrop
@@ -172,6 +170,7 @@ youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPl
 youtube.com,youtube-nocookie.com##.iv-branding
 youtube.com,youtube-nocookie.com##div#player-ads
 ||youtube.com/api/stats
+||youtube.com/sw.js_data
 	!! YouTube Experimental
 ||consent.google.*^$3p
 ||consent.youtube.com^$3p
