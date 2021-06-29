@@ -85,6 +85,7 @@
 /videojs.ads
 /wp-json/ads
 /www/delivery/*
+/blocker_check
 
 ! Prevent Tracking URLs v2 (www.example.nothing/analytics.js)
 !! /twitch-videoad.js
