@@ -382,9 +382,8 @@ myauto.ge##div.mb-40.banner
 
 ! Spotify
 ||google.com^$domain=open.spotify.com
-||guc-spclient.spotify.com/*/events
-||guc-spclient.spotify.com/melody/*/logging
-||guc-spclient.spotify.com/track-playback/v1/devices
+||spotify.com/*/events
+||spotify.com/melody/*/logging
 ||pixel-static.spotify.com^
 ||pixel.spotify.com^
 ||scdn.co/*/js/gtm
@@ -393,7 +392,7 @@ myauto.ge##div.mb-40.banner
 ||spotify.com/*/event/track-action
 ||spotify.com/*/metric
 @@||api.spotify.com/*/tracks
-@@||guc-spclient.spotify.com/track-playback/*
+@@||spotify.com/track-playback/*
 @@||open.scdn.co/*/tracklist-placeholder.
 /webpack/sp-analytics
 /webpack/tracking.
