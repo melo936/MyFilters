@@ -36,9 +36,9 @@
 /browserinfo
 /busting/*/gtm-
 /cdn-cgi/bm/cv/*
-/client_204?$image,other,ping,script
+/client_204
 /count
-/csi_204?$image,other,ping,script
+/csi_204
 /csp_report
 /cspreport
 /dlpageping?
@@ -130,22 +130,36 @@ www.google.*##.bfcO6b
 www.google.*##.irPjbc
 www.google.*##.wwYr3.aID8W.bErdLd
 www.google.*##html.QVCmK:style(overflow: auto !important;)
+*##+js(cookie-remover, 1P_JAR)
 ||adservice.google.*^
 ||doubleclick.net^
+||firebasestorage.googleapis.com^$3p
 ||fundingchoicesmessages.google.com^$3p
 ||google-analytics.com^
+||google.*/_/VisualFrontendUi/browserinfo
+||google.*/_/VisualFrontendUi/jserror
+||google.*/client_204
 ||google.*/imgevent$ping
 ||google.*/log
+||google.*/search$removeparam=bih
+||google.*/search$removeparam=biw
+||google.*/search$removeparam=client
+||google.*/search$removeparam=cp
+||google.*/search$removeparam=dpr
+||google.*/search$removeparam=hl
+||google.*/search$removeparam=iflsig
+||google.*/search$removeparam=k
+||google.*/search$removeparam=oq
+||google.*/search$removeparam=rlz
+||google.*/search$removeparam=sclient
+||google.*/search$removeparam=uact
+||google.*/search$removeparam=ved
+||googleapis.*/identitytoolkit/*
 ||googleoptimize.com^$3p
 ||googlesyndication.com^
 ||googletagmanager.com^$3p
 ||googletagservices.com^$3p
 ||mail-ads.google.*^
-||google.*/_/VisualFrontendUi/browserinfo
-||google.*/_/VisualFrontendUi/jserror
-||google.*/client_204
-||googleapis.*/identitytoolkit/*
-||firebasestorage.googleapis.com^$3p
 ! Experimental
 !! It is just fonts ||gstaticadssl.l.google.com^
 
@@ -170,8 +184,12 @@ youtube.com,youtube-nocookie.com##+js(set-constant, playerResponse.adPlacements,
 youtube.com,youtube-nocookie.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtube-nocookie.com##.iv-branding
 youtube.com,youtube-nocookie.com##div#player-ads
+!||googlevideo.com/videoplayback$removeparam=ip
 ||youtube.com/api/stats
 ||youtube.com/sw.js_data
+||ytimg.com$removeparam=sigh
+||ytimg.com$removeparam=sqp
+||ytimg.com$removeparam=v
 	!! YouTube Experimental
 ||consent.google.*^$3p
 ||consent.youtube.com^$3p
