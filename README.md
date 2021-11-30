@@ -7,7 +7,7 @@ I decided to make my own filters in order to prevent tracking or block ads, whic
 ## Recommended extensions/browsers to use this filter:
 
 * [uBlockOrigin](https://ublockorigin.com/)
-* [Brave's Shield](https://brave.com/download) - Currently, it doesn't support custom URL filters. However, selecting/copying everything from [here](https://raw.githubusercontent.com/dreammjow/MyFilters/main/src/filters.txt) and pasting it into `brave://adblock/` → `Custom Filters` works fine.
+* [Brave's Shield](https://brave.com/download)
 
 It can also be used with [Vivaldi](https://vivaldi.com/download/) and other browsers.
 
@@ -18,9 +18,6 @@ It can also be used with [Vivaldi](https://vivaldi.com/download/) and other brow
 * [Peter Lowe](https://pgl.yoyo.org/)
 * [Brave](https://github.com/brave)
 * [AdGuard](https://github.com/adguard)
-
-## Donation
-Monero: `46FQDwvrc3uNAEGrptoMSwY3oAdmFNVnjc8jzkCTw9MG9XTstDU2JwjTADyphKhqDw9mKBjU8eaUacLErHmDqvvWFpCQW3N`
 
 ## License:
 Licensed under GNU General Public License v3.0

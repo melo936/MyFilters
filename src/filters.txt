@@ -421,9 +421,11 @@ ghacks.net##.ghacks-ad
 ||ghacks.net/*/px.gif
 
 ! Poti.ge
-poti.ge##+js(set, jwpAdvertising, undefined)
-poti.ge##+js(set, jwpBannerAdvertising, undefined)
-poti.ge##.rentplace
+/jquery-bannerAds.js
+/customer/*.xml
+poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
+poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
+##.rentplace
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
