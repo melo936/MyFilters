@@ -14,7 +14,7 @@
 .lms-analytics/
 .openxtag.
 /OneCollector
-/activity
+!!/activity
 /adchoices-
 /ads
 /ads-iframe
@@ -393,9 +393,10 @@ myauto.ge##div.mb-40.banner
 -sc-analytics.
 
 ! Instagram
+instagram.com$removeparam=x-user-agent
+||instagram.com/api/*/stories/reel/seen
 ||instagram.com/ajax/bz
-||instagram.com/logging/
-||instagram.com/logging_client_events
+||instagram.com/logging*
 ||instagram.com/security/csp_report
 
 ! Spotify
@@ -421,11 +422,15 @@ ghacks.net##.ghacks-ad
 ||ghacks.net/*/px.gif
 
 ! Poti.ge
-/jquery-bannerAds.js
-/customer/*.xml
 poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
 poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
+/jquery-bannerAds.js
+/customer/*.xml
 ##.rentplace
+
+! Croconet.ge
+croconet.ge##.bunner_section.fullstory > a.link
+||croconet.ge/ads-crocobet
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
@@ -660,3 +665,7 @@ poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
 @@||protonvpn.com/*/events
 @@||protonmail.com/api/*/count
 @@||protonmail.com/api/*/events/
+@@||api.medialeap.com/countryList
+@@||cfl.dropboxstatic.com
+@@||myenglishlab.pearson-intl.com/api/*/timeline/users/current/counters
+@@||myenglishlab.pearson-intl.com/js/build/grunt/*
