@@ -663,8 +663,8 @@ croconet.ge##.bunner_section.fullstory > a.link
 @@track_*.png
 @@||nextdns.io/configurations/*/analytics/
 @@||protonvpn.com/*/events
-@@||protonmail.com/api/*/count
-@@||protonmail.com/api/*/events/
+@@||protonmail.com/api/*
+@@||proton.me/api/*
 @@||api.medialeap.com/countryList
 @@||cfl.dropboxstatic.com
 @@||myenglishlab.pearson-intl.com/api/*/timeline/users/current/counters
