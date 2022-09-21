@@ -258,7 +258,7 @@ adjaranet.com##div.fVBMtA.zoruuo-0:nth-of-type(4)
 ||bmscontent1.adjarabet.com^
 ||counter.top.ge^
 ||open5.myvideo.ge^
-!! Blocking Facebook breaks Comments section. Howeverm we don't give a damn people' stupid opinions about movies
+!! Blocking Facebook breaks Comments section
 ||facebook.com^$domain=adjaranet.com
 ||facebook.net^$domain=adjaranet.com
 
@@ -410,7 +410,6 @@ instagram.com$removeparam=x-user-agent
 ||spotify.com/*/event/track
 ||spotify.com/*/event/track-action
 ||spotify.com/*/metric
-@@||api.spotify.com/*/tracks
 @@||spotify.com/track-playback/*
 @@||open.scdn.co/*/tracklist-placeholder.
 /webpack/sp-analytics
@@ -660,6 +659,7 @@ croconet.ge##.bunner_section.fullstory > a.link
 ##ins.adsbygoogle[data-ad-client]:not([data-matched-content-ui-type])
 
 ! Fixes
+@@tracks
 @@track_*.png
 @@||nextdns.io/configurations/*/analytics/
 @@||protonvpn.com/*/events
@@ -669,3 +669,5 @@ croconet.ge##.bunner_section.fullstory > a.link
 @@||cfl.dropboxstatic.com
 @@||myenglishlab.pearson-intl.com/api/*/timeline/users/current/counters
 @@||myenglishlab.pearson-intl.com/js/build/grunt/*
+@@||soundcloud.com/me* 
+@@||soundcloud.com/users*
