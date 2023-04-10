@@ -26,7 +26,7 @@
 /adsid/google/ui
 /advertisement_
 /ajax/eventlog?
-/analytics
+/analytics$domain=~my.nextdns.io
 /analytics-iframe
 /api/stats
 /b/ss/*/js-
@@ -43,7 +43,7 @@
 /cspreport
 /dlpageping?
 /entry_stats?
-/events
+/events$domain=~protonvpn.com
 /exti
 /gen204
 /gen_204
@@ -424,8 +424,11 @@ ghacks.net##.ghacks-ad
 poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
 poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
 /jquery-bannerAds.js
+/topauto.js
+/jwplayer.banner.js
 /customer/*.xml
 ##.rentplace
+poti.ge##.amindi
 
 ! Croconet.ge
 croconet.ge##.bunner_section.fullstory > a.link
@@ -661,8 +664,6 @@ croconet.ge##.bunner_section.fullstory > a.link
 ! Fixes
 @@tracks
 @@track_*.png
-@@||nextdns.io/configurations/*/analytics/
-@@||protonvpn.com/*/events
 @@||protonmail.com/api/*
 @@||proton.me/api/*
 @@||api.medialeap.com/countryList
