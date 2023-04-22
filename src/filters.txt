@@ -173,7 +173,7 @@ youtube.com###merch-shelf
 youtube.com###offer-module
 youtube.com###ticker.ytd-masthead
 youtube.com###voice-search-button
-youtube.com##+js(cookie-remover, PREF)
+! breaks dark mode youtube.com##+js(cookie-remover, PREF)
 youtube.com##.ytp-ad-progress-list
 youtube.com##div#masthead-ad
 youtube.com##iron-overlay-backdrop
