@@ -420,19 +420,38 @@ ghacks.net##.ghacks-ad
 ||datadoghq-browser-agent.com^
 ||ghacks.net/*/px.gif
 
-! Poti.ge
-poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
-poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
+
+! Croconet.ge
+croconet.ge##.bunner_section.fullstory > a.link
+||croconet.ge/ads-crocobet
+||croconet.ge/baneri/
+||sponsoriacroco.ge
+||croconet.ge/baneri/
+/playerads
+##.reklama-1
+##.reklama-2
+##.reklama-3
+##.reklama-4
+##.video_reclam
+
+! some Georgian movie websites (seems to be founded by the same people)
+||mykadri.com/*/ban*
+||mykadri.com/*/ad*
+/jquery-playerAds.js
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpRandomAd, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAds, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
+/mondostudio.js
 /jquery-bannerAds.js
 /topauto.js
 /jwplayer.banner.js
 /customer/*.xml
 ##.rentplace
 poti.ge##.amindi
-
-! Croconet.ge
-croconet.ge##.bunner_section.fullstory > a.link
-||croconet.ge/ads-crocobet
+/dnsads.js
+naxe.tv,adjaranet.bet##center
+naxe.tv##.section--rentplace
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
