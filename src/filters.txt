@@ -683,11 +683,12 @@ naxe.tv##.section--rentplace
 ! Fixes
 @@tracks
 @@track_*.png
-@@||protonmail.com/api/*
-@@||proton.me/api/*
+@@||proton*/api/*
 @@||api.medialeap.com/countryList
 @@||cfl.dropboxstatic.com
 @@||myenglishlab.pearson-intl.com/api/*/timeline/users/current/counters
 @@||myenglishlab.pearson-intl.com/js/build/grunt/*
 @@||soundcloud.com/me* 
 @@||soundcloud.com/users*
+@@||vercel.com/api/*/deployments/*
+@@||dash.cloudflare.com/*
