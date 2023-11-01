@@ -452,6 +452,7 @@ poti.ge##.amindi
 /dnsads.js
 naxe.tv,adjaranet.bet##center
 naxe.tv##.section--rentplace
+||static-cdn.xyz
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
