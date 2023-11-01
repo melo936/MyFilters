@@ -443,6 +443,7 @@ imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, j
 imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
 imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
 /mondostudio.js
+/adjaranettt.js
 /jquery-bannerAds.js
 /topauto.js
 /jwplayer.banner.js
