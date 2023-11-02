@@ -442,11 +442,9 @@ imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, j
 imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAds, undefined)
 imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
 imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
-/mondostudio.js
-/adjaranettt.js
-/jquery-bannerAds.js
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, navigator.__proto__.cookieEnabled, false)
+/*banner*
 /topauto.js
-/jwplayer.banner.js
 /customer/*.xml
 ##.rentplace
 poti.ge##.amindi
