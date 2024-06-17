@@ -1,5 +1,5 @@
-[Dreammjow's Personal Filters]
-! Title: Dreammjow's Personal Filters
+[h3r0's Personal Filters]
+! Title: h3r0 Personal Filters
 ! Homepage: https://github.com/dreammjow/MyFilters
 ! Licence: https://github.com/dreammjow/MyFilters/LICENSE
 ! 
@@ -435,14 +435,14 @@ croconet.ge##.bunner_section.fullstory > a.link
 ##.video_reclam
 
 ! some Georgian movie websites (seems to be founded by the same people)
-||mykadri.com/*/ban*
-||mykadri.com/*/ad*
+||mykadri.*/*/ban*
+||mykadri.*/*/ad*
 /jquery-playerAds.js
-imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpRandomAd, undefined)
-imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAds, undefined)
-imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
-imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
-imoviesge.com,naxe.tv,adjaranet.bet,mykadri.com,poti.ge,serialebi.ge##+js(set, navigator.__proto__.cookieEnabled, false)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.*,poti.ge,serialebi.ge##+js(set, jwpRandomAd, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.*,poti.ge,serialebi.ge##+js(set, jwpAds, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.*,poti.ge,serialebi.ge##+js(set, jwpAdvertising, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.*,poti.ge,serialebi.ge##+js(set, jwpBannerAdvertising, undefined)
+imoviesge.com,naxe.tv,adjaranet.bet,mykadri.*,poti.ge,serialebi.ge##+js(set, navigator.__proto__.cookieEnabled, false)
 /*banner*
 /topauto.js
 /customer/*.xml
@@ -452,6 +452,8 @@ poti.ge##.amindi
 naxe.tv,adjaranet.bet##center
 naxe.tv##.section--rentplace
 ||static-cdn.xyz
+mykadri.*##div.video_ad
+mykadri.*##center
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
