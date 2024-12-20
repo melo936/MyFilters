@@ -344,6 +344,11 @@ myhome.ge###T
 myhome.ge##.banner.a-banners
 myhome.ge##.h-banners
 myhome.ge##.text-center.full-banner
+! Annoying cookie banners
+myhome.ge,myauto.ge##+js(set-local-storage-item, cookiePolicyAgreement, accepted)
+myhome.ge##+js(set-local-storage-item, My_Cookie-Banner_APP, false)
+mymarket.ge##+js(set-local-storage-item, CookiePolicy, true)
+myparts.ge##+js(set-cookie, cookiepolicy, true)
 
 ! ZippyShare
 zippyshare.com##+js(abort-current-inline-script, String.fromCharCode, decodeURIComponent)
@@ -454,6 +459,8 @@ naxe.tv##.section--rentplace
 ||static-cdn.xyz
 mykadri.*##div.video_ad
 mykadri.*##center
+mykadri.*##.avc-amba
+mykadri.*##.catfish
 
 ! Currently not categorized
 ||360.tbcconnect.ge/collector.js
